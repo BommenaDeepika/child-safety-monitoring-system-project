@@ -1,0 +1,43 @@
+digraph ChildSafetyMonitoring {
+
+rankdir=TB;
+node [shape=box, style="rounded,filled", fillcolor=lightblue];
+
+Start [shape=oval, fillcolor=lightgreen, label="Start System"];
+
+Capture [label="Capture Data\n(CCTV Camera + Wearable Sensors)"];
+
+Emotion [label="Emotion Detection\n(CNN Model)"];
+
+Activity [label="Activity Analysis\n(Object Detection / Behavior Monitoring)"];
+
+GPS [label="Acquire Location\n(GPS Module)"];
+
+Fusion [label="AI Decision Engine\n(Data Fusion & Risk Analysis)"];
+
+Decision [shape=diamond, fillcolor=lightyellow, label="Is Risk Detected?"];
+
+Alert [label="Generate Alert"];
+
+Notify [label="Send Notification\n(SMS / Dashboard Alert)"];
+
+Safe [label="Continue Monitoring"];
+
+End [shape=oval, fillcolor=lightgreen, label="End Monitoring Cycle"];
+
+Start -> Capture;
+Capture -> Emotion;
+Emotion -> Activity;
+Activity -> GPS;
+GPS -> Fusion;
+Fusion -> Decision;
+
+Decision -> Alert [label="Yes"];
+Decision -> Safe [label="No"];
+
+Alert -> Notify;
+Notify -> End;
+
+Safe -> Capture;
+
+}
