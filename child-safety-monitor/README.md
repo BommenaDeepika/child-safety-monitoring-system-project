@@ -1,91 +1,155 @@
+# Child Safety Monitoring System
+
+A real-time child safety monitoring application that uses computer vision to detect facial emotions and identify potentially dangerous situations. The system provides live webcam monitoring and can send emergency SMS alerts to guardians using Twilio.
+
 ---
-title: child-safety_monitor
-sdk: docker
-app_port: 7860
-pinned: false
+
+## Features
+
+- 👶 Real-time child monitoring
+- 😊 Facial emotion recognition
+- ⚠️ Danger detection
+- 📹 Live webcam monitoring
+- 📱 SMS emergency alerts using Twilio
+- 🌐 Flask-based web application
+- 🚨 Real-time safety notifications
+
 ---
 
-# Facial Expression Recognition
+## Tech Stack
 
-Tutorial Link: https://www.youtube.com/watch?v=a573pDNNFEY
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
 
-Dataset Link: https://www.kaggle.com/datasets/msambare/fer2013
+### Backend
+- Python
+- Flask
 
-## Quick Deploy (Docker)
+### Computer Vision & AI
+- OpenCV
+- YOLOv8
+- TensorFlow / Keras
 
-This project includes TensorFlow + OpenCV, so Docker is the most reliable deployment path.
+### APIs & Services
+- Twilio SMS API
 
-### 1) Build image
+### Tools
+- Git
+- GitHub
+- Docker
 
-```bash
-docker build -t fer-app .
+---
+
+## Project Structure
+
+```
+child-safety-monitor/
+│── app.py
+│── Test.py
+│── templates/
+│── static/
+│── models/
+│── requirements.txt
+│── Dockerfile
+│── README.md
 ```
 
-### 2) Run container
+---
+
+## Installation
+
+### Clone the repository
 
 ```bash
-docker run --rm -p 5000:5000 --env PORT=5000 fer-app
+git clone https://github.com/your-username/child-safety-monitor.git
 ```
 
-### 3) Open app
+### Navigate to the project
 
-```text
+```bash
+cd child-safety-monitor
+```
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the application
+
+```bash
+python app.py
+```
+
+Open your browser and visit:
+
+```
 http://127.0.0.1:5000
 ```
 
-Health check endpoint:
+---
 
-```text
-http://127.0.0.1:5000/health
-```
+## Docker
 
-## Cloud Deploy (Render/Railway/Fly.io)
-
-1. Push this repo to GitHub.
-2. Create a new Web Service from the repo.
-3. Choose Docker deployment (auto-detect using `Dockerfile`).
-4. Set environment variables in your platform dashboard:
-
-```text
-PORT=5000
-FLASK_DEBUG=false
-ENABLE_SMS_ALERTS=false
-TWILIO_ACCOUNT_SID=
-TWILIO_AUTH_TOKEN=
-TWILIO_PHONE_NUMBER=
-RECIPIENT_PHONE_NUMBER=
-TWILIO_STATUS_POLL_SECONDS=5
-```
-
-5. Deploy and verify `/health` returns `{"status":"ok"}`.
-
-## Run Without Docker (Local)
-
-1. Create and activate your virtual environment.
-2. Install dependencies:
-
-	```bash
-	pip install -r requirements.txt
-	```
-
-3. Start Flask backend:
-
-	```bash
-	python app.py
-	```
-
-4. Open in browser:
-
-	```text
-	http://127.0.0.1:5000
-	```
-
-The frontend is in `templates/index.html` and the backend API is in `app.py`.
-
-## Run Desktop Webcam Script
+Build the Docker image
 
 ```bash
-python Test.py
+docker build -t child-safety-monitor .
 ```
 
-Press `q` to quit webcam mode.
+Run the container
+
+```bash
+docker run --rm -p 5000:5000 child-safety-monitor
+```
+
+---
+
+## Configuration
+
+If you want to enable SMS alerts, configure the following environment variables:
+
+- TWILIO_ACCOUNT_SID
+- TWILIO_AUTH_TOKEN
+- TWILIO_PHONE_NUMBER
+- RECIPIENT_PHONE_NUMBER
+
+---
+
+## Screenshots
+
+Add screenshots of:
+
+- Home Page
+- Live Webcam Detection
+- Emotion Detection
+- Alert Notification
+- Dashboard
+
+---
+
+## Future Enhancements
+
+- Mobile application
+- GPS tracking integration
+- Cloud deployment
+- Parent dashboard
+- Email notifications
+- Improved object and activity detection
+
+---
+
+## Author
+
+**Deepika Bommena**
+
+Bachelor of Technology (Computer Science Engineering)
+
+---
+
+## License
+
+This project is developed for educational and academic purposes.
