@@ -63,7 +63,7 @@ child-safety-monitor/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/child-safety-monitor.git
+git clone https://github.com/BommenaDeepika/child-safety-monitoring-system-project.git
 ```
 
 ### Navigate to the project
@@ -117,17 +117,7 @@ If you want to enable SMS alerts, configure the following environment variables:
 - TWILIO_PHONE_NUMBER
 - RECIPIENT_PHONE_NUMBER
 
----
 
-## Screenshots
-
-Add screenshots of:
-
-- Home Page
-- Live Webcam Detection
-- Emotion Detection
-- Alert Notification
-- Dashboard
 
 ---
 
