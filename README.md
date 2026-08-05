@@ -1,26 +1,25 @@
 # 🛡️ Child Safety Monitoring System
 
-A real-time child safety monitoring application that uses computer vision to detect facial emotions and identify potentially dangerous situations. The system provides live webcam monitoring and can send emergency SMS alerts to guardians using Twilio.
+## 📌 Overview
 
----
+The Child Safety Monitoring System is a web-based application designed to enhance child safety through real-time monitoring using computer vision and IoT concepts.
 
-# 📌 Overview
-
-The Child Safety Monitoring System is designed to enhance child safety by combining computer vision and web technologies. It continuously monitors a live webcam feed, detects facial emotions, identifies dangerous situations, and sends emergency alerts when required.
-
-This project is built using Python, Flask, OpenCV, TensorFlow, YOLOv8, HTML, CSS, and JavaScript.
+The system provides live emotion detection, webcam monitoring, video upload analysis, ESP device monitoring, GPS location tracking, Google Maps integration, and emergency alerts through a modern dashboard.
 
 ---
 
 # ✨ Features
 
 - 👶 Real-time Child Monitoring
-- 😊 Facial Emotion Recognition
-- ⚠️ Danger Detection
-- 📷 Live Webcam Monitoring
-- 📱 SMS Emergency Alerts using Twilio
-- 🌐 Flask-based Web Application
-- 🚨 Real-time Safety Notifications
+- 😊 Facial Emotion Detection
+- 📹 Live Webcam Monitoring
+- 🎥 Video Upload Analysis
+- ⚠️ Harmful Object Detection
+- 📍 GPS Location Tracking
+- 🌍 Google Maps Integration
+- 📡 ESP Device Monitoring
+- 📱 SMS Alerts using Twilio
+- 🌐 Responsive Web Dashboard
 
 ---
 
@@ -37,10 +36,11 @@ This project is built using Python, Flask, OpenCV, TensorFlow, YOLOv8, HTML, CSS
 
 ## Computer Vision & AI
 - OpenCV
-- YOLOv8
 - TensorFlow / Keras
+- YOLOv8
 
 ## APIs & Services
+- Google Maps API
 - Twilio SMS API
 
 ## Tools
@@ -52,41 +52,53 @@ This project is built using Python, Flask, OpenCV, TensorFlow, YOLOv8, HTML, CSS
 
 # 📂 Project Structure
 
-```
-child-safety-monitor/
-│── app.py
-│── Test.py
-│── templates/
-│── static/
-│── models/
-│── requirements.txt
-│── Dockerfile
-│── README.md
+```text
+app.py
+danger_detector.py
+emotion_engine.py
+templates/
+static/
+screenshots/
+requirements.txt
+Dockerfile
+README.md
 ```
 
 ---
 
 # 🚀 Installation
 
-## Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/BommenaDeepika/child-safety-monitoring-system-project.git
 ```
 
-## Navigate to the Project Folder
+### Move to the Project Folder
 
 ```bash
-cd child-safety-monitor
+cd child-safety-monitoring-system-project
 ```
 
-## Install Dependencies
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate Virtual Environment (Windows)
+
+```bash
+venv\Scripts\activate
+```
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run the Application
+### Run the Application
 
 ```bash
 python app.py
@@ -100,54 +112,46 @@ http://127.0.0.1:5000
 
 ---
 
-# 🐳 Docker
-
-## Build Docker Image
-
-```bash
-docker build -t child-safety-monitor .
-```
-
-## Run Docker Container
-
-```bash
-docker run --rm -p 5000:5000 child-safety-monitor
-```
-
----
-
-# ⚙️ Configuration
-
-To enable SMS alerts, configure the following environment variables:
-
-- TWILIO_ACCOUNT_SID
-- TWILIO_AUTH_TOKEN
-- TWILIO_PHONE_NUMBER
-- RECIPIENT_PHONE_NUMBER
-
----
-
 # 📸 Screenshots
 
-Add screenshots of:
+## Home Page
 
-- Home Page
-- Live Webcam Monitoring
-- Emotion Detection
-- Danger Detection
-- SMS Alert
-- Dashboard
+![Home Page](screenshots/screenshot-01.png)
+
+---
+
+## About Page
+
+![About Page](screenshots/screenshot-02.png)
+
+---
+
+## ESP Device Dashboard
+
+![ESP Dashboard](screenshots/screenshot-03.png)
+
+---
+
+## Alert Messages
+
+![Alert Messages](screenshots/screenshot-04.png)
+
+---
+
+## Harmful Object Detection
+
+![Object Detection](screenshots/screenshot-05.png)
 
 ---
 
 # 🔮 Future Enhancements
 
-- 📱 Mobile Application
-- 📍 GPS Tracking Integration
-- ☁️ Cloud Deployment
-- 👨‍👩‍👧 Parent Dashboard
-- 📧 Email Notifications
-- 🤖 Improved Object & Activity Detection
+- Mobile Application
+- GPS Live Tracking
+- Parent Dashboard
+- Push Notifications
+- Cloud Deployment
+- Multi-camera Support
 
 ---
 
@@ -161,4 +165,4 @@ Bachelor of Technology (Computer Science Engineering)
 
 # 📄 License
 
-This project was developed for educational and academic purposes.
+This project is developed for educational and learning purposes.
